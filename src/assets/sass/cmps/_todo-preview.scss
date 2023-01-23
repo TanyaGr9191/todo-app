@@ -1,0 +1,48 @@
+.todo-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8px;
+    width: 100%;
+    border-bottom: 0.5px solid rgb(243, 240, 240);
+    font-size: 16px;
+    background-color: #f7f7f7;
+    margin-bottom: 5px;
+    border-radius: 8px;
+
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    *>button, a {
+        background-color: #d2edff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 18px 12px 18px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
+        margin-left: 15px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .details:hover {
+        background-color: #009bd9;
+        color: whitesmoke;
+    }
+    
+    .edit:hover {
+        background-color: #5cf1ff;
+        color: whitesmoke;
+    }
+
+    .btn-remove:hover {
+        background-color: #ff5400;
+        color: whitesmoke;
+    }
+}

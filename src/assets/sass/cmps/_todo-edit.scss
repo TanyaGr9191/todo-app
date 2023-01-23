@@ -1,0 +1,27 @@
+.todo-edit {
+    display: flex;
+
+    input {
+        border: 1px solid grey;
+        width: 90%;
+        height: 40px;
+        border-radius: 8px 0 0 8px;
+        padding: 0 8px;
+        font-size: 1.1rem;
+    }
+
+    [type=text]{
+        padding: 1em 1em 1.2em 1.1em;
+    }
+
+    button {
+        border: none;
+        cursor: pointer;
+        flex: 1;
+        border-radius: 0 8px 8px 0;
+        background-color: #0c2e8a;
+        color: #fff;
+        font-size: 15px;
+
+    }
+}

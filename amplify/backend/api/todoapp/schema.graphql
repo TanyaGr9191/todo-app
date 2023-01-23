@@ -1,0 +1,35 @@
+# This "input" configures a global authorization rule to enable public access to
+# all moDels in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type Todo @model @auth(rules: [{allow: owner}]){
+  id: ID!
+  txt: String!
+  isDone: Boolean
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  owner: String
+}
+
+type Weather {
+	timestamp: AWSDateTime
+	location: String
+	condition: Int
+	description: String
+	temperature: Float
+	pressure: Float
+	humidity: Float
+	wind_speed: Float
+	wind_direction: Int
+	cloud_cover: Float
+	rain_volume: Float
+	snow_volume: Float
+}
+
+type Query {
+	getWeather(city: String!): Weather
+}
+
+schema {
+	query: Query
+}

@@ -1,0 +1,66 @@
+.todo-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    padding: 18px 0;
+    height: calc(100vh - 95px);
+
+    .details-container {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            min-height: 142px;
+            margin-left: 30px;
+
+            span:first-child {
+                font-weight: 700;
+            }
+        }
+
+        .weather {
+            display: flex;
+
+            .description {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .img-container {
+            width: 72px;
+            height: 72px;
+            margin-left: 40px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+
+    button {
+        cursor: pointer;
+        border: none;
+        width: 80px;
+        margin-top: 18px;
+        border-radius: 5px;
+        background-color: #009bd9;
+        padding: 10px 18px 12px 18px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1;
+        transition: all ease-in-out 0.3s;
+        color: whitesmoke;
+
+
+        &:hover {
+            background-color: #5cf1ff;
+        }
+    }
+
+}

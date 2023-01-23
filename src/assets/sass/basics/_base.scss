@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+html { 
+   font-family: Bahnschrift, sans-serif; 
+   color: $clr2;
+   line-height: 1.8;
+   line-height: lh(26px);
+   margin: 0;
+
+
+   @media (max-width: 1300px) {
+       font-size: 13px;
+   }
+}
+
+body {
+    margin: 0;
+    background-color: $clr3;
+}
+
+a{
+    text-decoration: none;
+}
+
+.app{
+    background: url(../../img/19007.jpg) no-repeat;
+    background-size: cover;
+    margin: 0;
+    z-index: -1;
+}
+
+input{
+    outline: none;
+}

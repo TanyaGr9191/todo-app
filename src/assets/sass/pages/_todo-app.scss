@@ -1,0 +1,18 @@
+.todo-app {
+    height: calc(100vh - 95px);
+
+    .todo-app-container {
+
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+
+        .app-image {
+            padding: 20px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+
+}

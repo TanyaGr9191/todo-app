@@ -1,0 +1,70 @@
+.header {
+    border-bottom: 1px solid #f2f5f8;
+
+    .main-header {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        flex: 1;
+
+        a.logo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex:3;
+            font-weight: 700;
+            font-size: 34px;
+
+            .logo-icon{
+                margin-right: 5px;
+            }
+
+            .logo-todo{
+                color:#0c2e8a;
+                padding-bottom: 8px;
+            }
+
+            .logo-app{
+                color: #5cf1ff;
+                padding-bottom: 8px;
+
+            }
+
+            .logo-dot{
+                color: $clr1;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            flex:1;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: 600;
+            max-width: 400px;
+
+            span {
+                color: #0c2e8a;
+            }
+            
+            .btn-navbar {
+                margin-left: 28px;
+                background-color: #f7f7f7;
+                border: none;
+                border-radius: 4px;
+                padding: 10px 18px 12px 18px;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 1;
+                cursor: pointer;
+                transition: all ease-in-out 0.3s;
+        
+                &:hover {
+                    background-color: #ff5400;
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+}
