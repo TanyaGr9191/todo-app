@@ -6,32 +6,24 @@ import update from 'immutability-helper'
 export const TodoList = ({ todos, onRemoveTodo, onEditTodo, onSetTodos }) => {
     const [todosLocal, setTodosLocal] = useState([])
 
+
+    function moveItem(todosToChange,from, to) {
+        const itemToMove = todosToChange.splice(from, 1)[0];
+        todosToChange.splice(to, 0, itemToMove);
+        
+        return todosToChange
+      }
+
     const moveTodo = useCallback((dragIndex, hoverIndex) => {
-        setTodosLocal(prev =>
-            update(prev, {
-                $splice: [
-                    [dragIndex, 1],
-                    [hoverIndex, 0, prev[dragIndex]],
-                ],
-            }),
-        )
+        const todosTuUpdate =   moveItem(todos,dragIndex,hoverIndex)
+        console.log('todosTuUpdate',todosTuUpdate);
+        onSetTodos(todosTuUpdate)
     }, [])
-
-    //use local state to obtain the previous state to make drag and drop more smooth
-    useEffect(() => {
-        setTodosLocal(todos)
-    }, [])
-
-    useEffect(() => {
-        if (todosLocal.length) {
-            onSetTodos(todosLocal)
-        }
-    }, [todosLocal])
 
     return <section className="todo-list">
         <div className="todo-list-container"  >
-            {todosLocal ?
-                todosLocal.map((todo, i) => (
+            {todos ?
+                todos.map((todo, i) => (
                     <TodoPreview
                         todo={todo}
                         moveTodo={moveTodo}

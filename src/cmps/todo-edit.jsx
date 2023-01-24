@@ -16,19 +16,22 @@ export const TodoEdit = ({ isEdit, onEditTodo, onSaveTodo }) => {
     }
 
     function onSave() {
-        const todoToSave = (todo?.id) ?
-            { ...todo, txt } :
-            { ...todo, txt, isDone: false }
         if (isEdit) {
             onEditTodo()
         }
-        onSaveTodo(todoToSave)
+        onSaveTodo( { ...todo, txt })
         setTxt('')
+    }
+
+    function onKeyPress(e) {
+        if (e.which === 13) {
+            onSave()
+        }
     }
 
     return (
         <div className='todo-edit'>
-            <input placeholder={isEdit ? 'Edit' : 'Add'} value={txt} onChange={handleChange} type="text" />
+            <input placeholder={isEdit ? 'Edit' : 'Add'} value={txt} onChange={handleChange} type="text" onKeyDown={onKeyPress} />
             <button onClick={onSave}>Save</button>
         </div>
     )

@@ -9,14 +9,14 @@ export function todoReducer(state = initialState, action) {
     var todos
     switch (action.type) {
         case 'SET_TODOS':
-            newState={ ...state, todos: action.todos }
+            newState = { ...state, todos: action.todos }
             break
         case 'REMOVE_TODO':
             todos = state.todos.filter(todo => todo.id !== action.todoId)
             newState = { ...state, todos }
             break
         case 'ADD_TODO':
-            todos = [...state.todos, action.todo]
+            todos = [action.todo, ...state.todos]
             newState = { ...state, todos }
             break
         case 'UPDATE_TODO':
