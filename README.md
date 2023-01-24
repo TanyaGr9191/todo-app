@@ -2,6 +2,8 @@
 
 The Todo App is a web-application that allows you to manage your tasks easily. The app is designed to provide a seamless and user-friendly experience for movie enthusiasts. The app's main features include:
 
+📌 You may drag and drop tasks to organize your to-do list.
+
 📌 You can sign in directly with a user name and password.
 
 📌 User-friendly interface: The app has a sleek and modern design, with an intuitive and easy-to-use user interface.
