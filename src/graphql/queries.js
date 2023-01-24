@@ -24,7 +24,6 @@ export const getTodo = /* GraphQL */ `
     getTodo(id: $id) {
       id
       txt
-      isDone
       createdAt
       updatedAt
       owner
@@ -41,7 +40,6 @@ export const listTodos = /* GraphQL */ `
       items {
         id
         txt
-        isDone
         createdAt
         updatedAt
         owner

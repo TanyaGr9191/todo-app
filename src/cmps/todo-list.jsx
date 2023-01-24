@@ -15,9 +15,8 @@ export const TodoList = ({ todos, onRemoveTodo, onEditTodo, onSetTodos }) => {
       }
 
     const moveTodo = useCallback((dragIndex, hoverIndex) => {
-        const todosTuUpdate =   moveItem(todos,dragIndex,hoverIndex)
-        console.log('todosTuUpdate',todosTuUpdate);
-        onSetTodos(todosTuUpdate)
+        const todosToUpdate =   moveItem(todos,dragIndex,hoverIndex)
+        onSetTodos(todosToUpdate)
     }, [])
 
     return <section className="todo-list">
