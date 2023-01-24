@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# 🚀 Overview of the application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Todo App is a web-application that allows you to manage your tasks easily. The app is designed to provide a seamless and user-friendly experience for movie enthusiasts. The app's main features include:
 
-## Available Scripts
+📌 You can sign in directly with a user name and password.
 
-In the project directory, you can run:
+📌 User-friendly interface: The app has a sleek and modern design, with an intuitive and easy-to-use user interface.
 
-### `npm start`
+![Todo-list](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674563375/1_ibbvef.jpg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📌 To-do list: You can create and manage your own todo-list, where you can add, edit or remove your tasks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Todo-edit-remove tasks watchlist](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674563809/7_bhsc5x.jpg)
 
-### `npm test`
+📌 Check the task details; if you are traveling, you can view the weather information for the destination.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![To-do details](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674564171/3_c4iihj.jpg)
 
-### `npm run build`
+📌 TodoApp is cross-platform. Whether you're at home using the desktop app or are using the mobile app on the go you can access your task list and stay organized.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![To-do mobile](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674564667/10_jrklxd.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :zap: Technology
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app is built using React.js and Node.js with AWS technologies for data storage and retrieval. The app also utilizes a GraphQL to connect to the AWS DynamoDB database.
 
-### `npm run eject`
+🔹	AWS AppSync - a fully managed service that makes it easy to develop GraphQL APIs by handling the heavy lifting of securely connecting to data sources. It allows developers to build flexible, real-time apps by using GraphQL to securely connect to data sources such as AWS DynamoDB.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🔹	AWS Cognito - a user identity and data synchronization service that helps to securely manage and synchronize app data for users across their mobile devices. It provides features such as user sign-up, sign-in, and access control, as well as the ability to synchronize user data across devices.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🔹	AWS Amplify - a set of tools and services that enables mobile and web app developers to build scalable full stack serverless applications. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🔹	AWS DynamoDB - a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. It allows to store and retrieve any amount of data.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🔹	GraphQL - provides a flexible and powerful way for clients to request exactly the data they need from an API. With GraphQL, the client defines the structure of the data it needs, and the server responds with only the requested data.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🐾 Take your first step
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+:small_orange_diamond: Clone the project or download the files by going to the repository up above.
 
-### Code Splitting
+```sh
+git clone https://github.com/TanyaGr9191/disneyPlus-clone.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🔸 Next, we'll start the server with 'npm start':
+```sh
+npm i
+npm start
+```
 
-### Analyzing the Bundle Size
+>**Note:** A terminal output at localhost:3000 should be displayed once the server is up and running.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+👏 All done! 
 
-### Making a Progressive Web App
+✔️ You have completed your first step with TodoApp. Now the app is active!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🏆 Credits
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+✨ [Tanya Grudinkina](https://github.com/TanyaGr9191) [(visit my LinkedIn page)](https://www.linkedin.com/in/tanya-grudinkina/)
