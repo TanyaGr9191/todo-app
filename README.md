@@ -40,7 +40,7 @@ The app is built using React.js and Node.js with AWS technologies for data stora
 :small_orange_diamond: Clone the project or download the files by going to the repository up above.
 
 ```sh
-git clone https://github.com/TanyaGr9191/disneyPlus-clone.git
+https://github.com/TanyaGr9191/todo-app.git
 ```
 
 🔸 Next, we'll start the server with 'npm start':
