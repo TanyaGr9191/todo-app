@@ -18,7 +18,7 @@ The Todo App is a web-application that allows you to manage your tasks easily. T
 
 📌 TodoApp is cross-platform. Whether you're at home using the desktop app or are using the mobile app on the go you can access your task list and stay organized.
 
-![To-do mobile](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674564667/10_jrklxd.png)
+![To-do mobile](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674566009/11_x1rcvj.jpg)
 
 ## :zap: Technology
 
@@ -37,17 +37,27 @@ The app is built using React.js and Node.js with AWS technologies for data stora
 
 ## 🐾 Take your first step
 
-:small_orange_diamond: Clone the project or download the files by going to the repository up above.
+🔸 Clone the project or download the files by going to the repository up above.
 
 ```sh
 https://github.com/TanyaGr9191/todo-app.git
 ```
-
+>**Note:** You will need the 'aws-exports-file' in the 'src' folder 
+>
 🔸 Next, we'll start the server with 'npm start':
 ```sh
 npm i
 npm start
 ```
+🔸 Now you need to Sign In/Create Account.
+
+If you need to create account:
+
+1. Use your email to get a confirmation code.
+
+2. Enter the confirmation code.
+
+![To-do sign-in](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674567860/18_nilo6e.jpg)
 
 >**Note:** A terminal output at localhost:3000 should be displayed once the server is up and running.
 
