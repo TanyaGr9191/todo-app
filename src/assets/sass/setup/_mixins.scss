@@ -1,6 +1,20 @@
 /* Media queries Breakpoint mixins */
 
+@mixin for-narrow-mobile-layout {
+    @media (max-width:$break-mobile) {
+        @content;
+    }
+
+}
+
 @mixin for-mobile-layout {
+    @media (min-width:$break-mobile) {
+        @content;
+    }
+
+}
+
+@mixin for-mid-layout {
     @media (max-width: $break-narrow) {
         @content;
     }
@@ -25,6 +39,102 @@
 }
 
 @mixin gtcMainLayout ($width) {
-    grid-template-columns:
-        minmax($layoutPadding, 1fr) minmax(auto, $width) minmax($layoutPadding, 1fr);
+
+    display: grid;
+    grid-template-columns: $layoutPadding 1fr $layoutPadding;
+    margin: 0;
+
+    >*:not(.full) {
+        grid-column: 2;
+    }
+
+    >.full {
+        grid-column: 1/-1;
+    }
+
+    grid-template-columns: minmax($layoutPadding, 1fr) minmax(auto, $width) minmax($layoutPadding, 1fr);
+}
+
+@mixin flexMainLayout ($display, $column) {
+    display: $display;
+    flex-direction: $column;
+}
+
+//TODO LIST
+@mixin todolistDetails($margin, $flex-direction, $width) {
+
+    .details-container {
+        flex-direction: $flex-direction;
+
+        .details-img {
+            img {
+                width: $width;
+            }
+        }
+
+        .details {
+            margin: $margin;
+        }
+
+    }
+}
+
+//TODO PREVIEW
+@mixin todoPreview($background-image-details, $background-image-edit, $background-image-remove, $display, $background-color) {
+
+    *>button,
+    a {
+        background-color: $background-color;
+
+        img {
+            width: 1.875rem;
+        }
+    }
+
+    .details {
+        background-image: $background-image-details;
+
+        span{
+            display: $display
+        }
+    }
+
+    .edit {
+        background-image: $background-image-edit;
+
+        span{
+            display: $display
+        }
+    }
+    
+    .btn-remove {
+        background-image: $background-image-remove;
+
+        span{
+            display: $display
+        }
+    }
+
+}
+
+//TODO APP
+@mixin todoApp($padding) {
+    .todo-app-container {
+        padding: $padding;
+    }
+}
+
+//APP HEADER
+@mixin appHeader($padding, $flex-grow-one, $flex-grow-two) {
+    .main-header {
+        padding: $padding;
+
+        a.logo {
+            flex: $flex-grow-one;
+        }
+
+        .navbar {
+            flex: $flex-grow-two;
+        }
+    }
 }

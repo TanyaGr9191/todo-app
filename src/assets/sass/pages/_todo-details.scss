@@ -4,6 +4,8 @@
     font-size: 1.2rem;
     padding: 18px 0;
     height: calc(100vh - 95px);
+    width: 100%;
+    color: $clr2;
 
     .details-container {
 
@@ -11,11 +13,19 @@
         align-items: center;
         justify-content: center;
 
+        .details-img {
+
+            img {
+                margin-right: 1.5rem;
+                width: 12.5rem;
+            }
+        }
+
         .details {
             display: flex;
             flex-direction: column;
             min-height: 142px;
-            margin-left: 30px;
+            margin-left: 0;
 
             span:first-child {
                 font-weight: 700;
@@ -24,22 +34,9 @@
 
         .weather {
             display: flex;
-
-            .description {
-                display: flex;
-                flex-direction: column;
-            }
+            flex-direction: column;
         }
 
-        .img-container {
-            width: 72px;
-            height: 72px;
-            margin-left: 40px;
-
-            img {
-                width: 100%;
-            }
-        }
     }
 
 
@@ -55,12 +52,37 @@
         font-weight: 500;
         line-height: 1;
         transition: all ease-in-out 0.3s;
-        color: whitesmoke;
+        color: $clr7;
 
 
         &:hover {
-            background-color: #5cf1ff;
+            background-color: $clr4;
         }
+    }
+
+
+    @include for-narrow-mobile-layout {
+        @include todolistDetails($details-margin-left-rigth, $flex-direction-column, $details-image-width-small)
+    }
+
+    @include for-mobile-layout {
+        @include todolistDetails($details-margin-left-rigth, $flex-direction-column, $details-image-width-small)
+    }
+
+    @include for-mid-layout {
+        @include todolistDetails($details-margin-left-rigth, $flex-direction-column, $details-image-width-small)
+    }
+
+    @include for-narrow-layout {
+        @include todolistDetails($details-image-margin-left, $flex-direction-row, $details-image-width-medium)
+    }
+
+    @include for-normal-layout {
+        @include todolistDetails($details-container-no-margin, $flex-direction-row, $details-image-width-large)
+    }
+
+    @include for-wide-layout {
+        @include todolistDetails($details-container-no-margin, $flex-direction-row, $details-image-width-large)
     }
 
 }

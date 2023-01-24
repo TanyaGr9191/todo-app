@@ -1,14 +1,38 @@
+import { useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useCustomDrag } from '../hooks/useCustomDrag'
+import { useCustomDrop } from '../hooks/useCustomDrop'
 
-export const TodoPreview = ({ todo, onRemoveTodo, onEditTodo }) => (
-    <div className='todo-preview'>
+
+
+export const TodoPreview = ({ todo, onRemoveTodo, id, onEditTodo, index, moveTodo }) => {
+    const ref = useRef(null)
+
+    const [{ handlerId }, drop] = useCustomDrop({ ref, index, moveTodo })
+    const [{ isDragging }, drag] = useCustomDrag({ id, index })
+
+    drag(drop(ref))
+
+    if (!todo) return
+    return <div className='todo-preview' ref={ref}
+        style={{ backgroundColor: isDragging ? '#d9e3fd' : '#f7f7f7' }} data-handler-id={handlerId}>
         <span>{todo.txt}</span>
         <span className='buttons-container'>
-            {/* <Link to={`/todo/edit/${todo._id}`}>Edit</Link> */}
-            <Link to={`/todo/${todo.id}`} className='details'>Details</Link>
-            {/* <button className='btn-list' onClick={(ev)=>onDetailsTodo(ev,todo)}>Edit</button> */}
-            <button className='edit' onClick={()=>onEditTodo(todo)}>Edit</button>
-            <button className='btn-remove' onClick={(ev) => { onRemoveTodo(ev, todo.id) }}>Remove</button>
+            <Link
+                to={`/todo/${todo.id}`}
+                className='details'>
+                <span>Details</span>
+            </Link>
+            <button
+                className='edit'
+                onClick={() => onEditTodo(todo)}>
+                <span>Edit</span>
+            </button>
+            <button
+                className='btn-remove'
+                onClick={(ev) => { onRemoveTodo(ev, todo.id) }}>
+                <span>Remove</span>
+            </button>
         </span>
     </div>
-)
+}

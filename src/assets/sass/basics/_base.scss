@@ -3,12 +3,11 @@
 }
 
 html { 
-   font-family: Bahnschrift, sans-serif; 
+   font-family: Eurofurence; 
    color: $clr2;
    line-height: 1.8;
    line-height: lh(26px);
    margin: 0;
-
 
    @media (max-width: 1300px) {
        font-size: 13px;
@@ -17,7 +16,6 @@ html {
 
 body {
     margin: 0;
-    background-color: $clr3;
 }
 
 a{

@@ -1,10 +1,5 @@
-export const ImgContainer = (props) => {
-    
-    const { src, name, width, divStyle} = props
-    
-    return (
+export const ImgContainer = ({ src, name, width, divStyle }) => (
     <div className={divStyle}>
         <img src={src} alt={name} width={width} />
     </div>
-    )
-}
+)

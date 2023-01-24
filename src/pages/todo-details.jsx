@@ -1,14 +1,12 @@
-import { useState, useEffect, useLayoutEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 import { loadTodo } from '../store/todo/todo.action'
 import { utilService } from '../services/util.service'
 import { ImgContainer } from '../cmps/img-container'
-import axios from 'axios'
 import { Weather } from '../cmps/weather'
 import { Loading } from '../cmps/loading'
 import { todoService } from '../services/todo.service'
-const WEATHER_API = 'b2d8da6231001308750781b0f8dcd585'
 
 export const TodoDetails = () => {
     const { todo } = useSelector(state => state.todoModule)
@@ -21,7 +19,6 @@ export const TodoDetails = () => {
 
     useEffect(() => {
         dispatch(loadTodo(todoId))
-
     }, [todoId, loadTodo])
 
     useEffect(() => {
@@ -32,25 +29,22 @@ export const TodoDetails = () => {
                 setWeather(weatherRes)
             }
         }
-
         fetchData()
     }, [todo])
 
 
+    //GraphQL was used to obtain data from the Weather API
+    //Weather data can be seen in the provided online application
     async function getWeather() {
         if (!todo) return
         try {
             const city = utilService.getCityName(todo.txt)
-
             if (!city) return
-
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${WEATHER_API}`
-            const res = await axios.get(url)
-            return { ...res.data.weather[0], city }
+            const res = await todoService.getWeatherByCity(city)
+            return { ...res.getWeather, city }
         } catch (err) {
             console.log(err)
         }
-
     }
 
     const goBack = () => {

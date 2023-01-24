@@ -1,18 +1,52 @@
 // COLOR PALETTE
-$clr1: #FF521C;
-$clr2: #000;
-$clr3: #fff;
-$clr4: darken($clr3, 40%);
-$clr5: #2d2d2d;
+$clr1: #f2f5f8;
+$clr3: #0c2e8a;
+$clr2: black;
+$clr4: #5cf1ff;
+$clr5: #f7f7f7;
+$clr6: #ff5400;
+$clr7: whitesmoke;
 
 // LAYOUT
-$layoutPadding: 16px;
+$layoutPadding: 1rem;
 
 // LAYOUT BREAKPOINTS
-$break-narrow: 600px;
-$break-normal: 900px;
+$break-mobile: 330px;
+$break-narrow: 550px;
+$break-normal: 850px;
 $break-wide: 1200px;
 
-$padded-break-narrow: $break-narrow + $layoutPadding * 2;
-$padded-break-normal: $break-normal + $layoutPadding * 2;
-$padded-break-wide: $break-wide + $layoutPadding * 2;
+//GENERIC VARS
+$display-flex: flex;
+$display-none: none;
+$display-block: block;
+$flex-direction-column: column;
+$flex-direction-row: row;
+$background-image-none: none;
+$background-color-transparent: transparent;
+$no-padding: 0;
+$flex-grow-1: 1;
+$flex-grow-2: 2;
+$flex-grow-3: 3;
+$width-100: 100%;
+
+//TODO APP
+$padding-mobile: 0 0.1rem 0 0.1rem;
+
+//APP HEADER
+$padding-mobile-header: 0.625rem;
+
+//DETAILS
+$details-margin-left-rigth: 0 0.938rem 0 0.938rem;
+$details-image-margin-left: 0 0 0 0.938rem;
+$details-container-no-margin: 0;
+
+$details-image-width-small: 15.625rem;
+$details-image-width-medium: 18.75rem;
+$details-image-width-large: 21.875rem;
+
+//PREVIEW
+$background-image-1: url('https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674501257/list_jutn5w.png');
+$background-image-2: url('https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674501265/edit_qdqnt4.png');
+$background-image-3: url('https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674501239/dustbin_thuh8x.png');
+$button-background-color: #d2edff;

@@ -1,70 +1,98 @@
 .header {
-    border-bottom: 1px solid #f2f5f8;
+    border-bottom: 1px solid $clr1;
 
     .main-header {
         display: flex;
         align-items: center;
         height: 50px;
         flex: 1;
+        width: $width-100;
+
 
         a.logo {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            flex:3;
+            flex: 3;
             font-weight: 700;
-            font-size: 34px;
+            font-size: 2.125rem;
 
-            .logo-icon{
-                margin-right: 5px;
+            .logo-icon {
+                margin-right: 0.313rem;
             }
 
-            .logo-todo{
-                color:#0c2e8a;
-                padding-bottom: 8px;
+            .logo-todo {
+                color: $clr3;
+                padding-bottom: 0.2rem;
             }
 
-            .logo-app{
-                color: #5cf1ff;
-                padding-bottom: 8px;
+            .logo-app {
+                color: $clr4;
+                padding-bottom: 0.2rem;
 
             }
 
-            .logo-dot{
-                color: $clr1;
-            }
         }
 
         .navbar {
             display: flex;
-            flex:1;
+            flex: 1;
             justify-content: flex-end;
             align-items: center;
-            font-size: 1.2em;
+            font-size: 1.1rem;
             font-weight: 600;
-            max-width: 400px;
+            height: 100%;
+
 
             span {
-                color: #0c2e8a;
+                color: $clr3;
             }
-            
+
             .btn-navbar {
-                margin-left: 28px;
-                background-color: #f7f7f7;
+                background-color: $clr5;
                 border: none;
-                border-radius: 4px;
-                padding: 10px 18px 12px 18px;
-                font-size: 15px;
+                border-radius: 0.25rem;
+                padding: 0.6rem 1.125rem 0.6rem 1.125rem;
+                font-size: 0.93rem;
                 font-weight: 500;
                 line-height: 1;
                 cursor: pointer;
                 transition: all ease-in-out 0.3s;
-        
+                margin: 0 0 0 1.7rem;
+
                 &:hover {
-                    background-color: #ff5400;
-                    color: whitesmoke;
+                    background-color: $clr6;
+                    color: $clr7;
                 }
             }
         }
     }
+
+    @include for-narrow-mobile-layout {
+        @include appHeader($padding-mobile, $flex-grow-2, $flex-grow-1)
+    }
+    
+    @include for-mobile-layout {
+        @include appHeader($padding-mobile, $flex-grow-1, $flex-grow-2)
+    }
+    
+    @include for-mid-layout {
+        @include appHeader($padding-mobile, $flex-grow-2, $flex-grow-1)
+    }
+    
+    @include for-narrow-layout {
+        @include appHeader($padding-mobile, $flex-grow-1, $flex-grow-2)
+        
+    }
+    
+    @include for-normal-layout {
+        @include appHeader($padding-mobile, $flex-grow-2, $flex-grow-1)
+    }
+    
+    @include for-wide-layout {
+        @include appHeader($padding-mobile, $flex-grow-2, $flex-grow-1)
+    }
+    
 }
+
+

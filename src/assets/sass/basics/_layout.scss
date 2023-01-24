@@ -1,14 +1,15 @@
 .main-layout {
-    display: grid;
-    grid-template-columns: $layoutPadding 1fr $layoutPadding;
-    margin: 0;
 
-    > *:not(.full) {
-        grid-column: 2;
+    @include for-narrow-mobile-layout {
+        @include flexMainLayout ($display-flex, $flex-direction-column) 
     }
 
-    > .full{
-        grid-column: 1/-1;
+    @include for-mobile-layout {
+        @include flexMainLayout ($display-flex, $flex-direction-column) 
+    }
+
+    @include for-mid-layout {
+        @include gtcMainLayout ($break-narrow) 
     }
 
     @include for-narrow-layout {

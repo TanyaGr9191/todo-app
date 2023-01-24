@@ -6,13 +6,33 @@
         display: flex;
         flex-direction: column;
         max-height: 100%;
-
-        .app-image {
-            padding: 20px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
     }
+}
 
+@include for-narrow-mobile-layout {
+    @include todoApp($padding-mobile)
+
+}
+
+@include for-mobile-layout {
+    @include todoApp($padding-mobile)
+
+}
+
+@include for-mid-layout {
+    @include todoApp($padding-mobile)
+}
+
+@include for-narrow-layout {
+    @include todoApp($padding-mobile)
+ 
+ }
+
+ @include for-normal-layout {
+    @include todoApp($no-padding)
+
+}
+
+@include for-wide-layout {
+    @include todoApp($no-padding)
 }
