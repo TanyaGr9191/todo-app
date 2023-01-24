@@ -10,7 +10,7 @@ The Todo App is a web-application that allows you to manage your tasks easily. T
 
 ![Todo-list](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674563375/1_ibbvef.jpg)
 
-📌 To-do list: You can create and manage your own todo-list, where you can add, edit or remove your tasks.
+📌 To-do list: You can create and manage your own todo-list, where you can add and edit tasks (by "Save" or "Enter key") or remove them.
 
 ![Todo-edit-remove tasks watchlist](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674563809/7_bhsc5x.jpg)
 
@@ -44,7 +44,7 @@ The app is built using React.js and Node.js with AWS technologies for data stora
 ```sh
 https://github.com/TanyaGr9191/todo-app.git
 ```
->**Note:** You will need the 'aws-exports-file' in the 'src' folder 
+>**Note:** You will need the 'aws-exports.js' file in 'src' folder
 >
 🔸 Next, we'll start the server with 'npm start':
 ```sh
