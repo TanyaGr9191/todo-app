@@ -38,7 +38,6 @@ export const TodoApp = () => {
         dispatch(resetTodo())
     }
 
-
     if (!todos) return <Loading />
     return (
         <section className='todo-app'>

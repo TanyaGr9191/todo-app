@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import { useCustomDrag } from '../hooks/useCustomDrag'
 import { useCustomDrop } from '../hooks/useCustomDrop'
 
-
-
 export const TodoPreview = ({ todo, onRemoveTodo, id, onEditTodo, index, moveTodo }) => {
     const ref = useRef(null)
 

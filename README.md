@@ -8,21 +8,21 @@ The Todo App is a web-application that allows you to manage your tasks easily. T
 
 📌 User-friendly interface: The app has a sleek and modern design, with an intuitive and easy-to-use user interface.
 
-![Todo-list](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674563375/1_ibbvef.jpg)
+![Todo-list](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674628033/20_cqtaqe.jpg)
 
 📌 To-do list: You can create and manage your own todo-list, where you can add and edit tasks (by "Save" or "Enter key") or remove them.
 
-![Todo-edit-remove tasks watchlist](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674563809/7_bhsc5x.jpg)
+![Todo-edit-remove tasks](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674563809/7_bhsc5x.jpg)
 
 📌 Check the task details; if you are traveling, you can view the weather information for the destination.
 
-![To-do details](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674564171/3_c4iihj.jpg)
+![To-do details](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674628405/21_dqiw7d.jpg)
 
 📌 TodoApp is cross-platform. Whether you're at home using the desktop app or are using the mobile app on the go you can access your task list and stay organized.
 
 ![To-do mobile](https://res.cloudinary.com/dxwlsxl5s/image/upload/v1674566009/11_x1rcvj.jpg)
 
-## :zap: Technology
+## ⚡ Technology
 
 The app is built using React.js and Node.js with AWS technologies for data storage and retrieval. The app also utilizes a GraphQL to connect to the AWS DynamoDB database.
 
@@ -36,7 +36,7 @@ The app is built using React.js and Node.js with AWS technologies for data stora
 
 🔹	GraphQL - provides a flexible and powerful way for clients to request exactly the data they need from an API. With GraphQL, the client defines the structure of the data it needs, and the server responds with only the requested data.
 
-🔹	Drag and Drop - Drag'n'Drop backend compatible with React DnD. The application can smoothly use the nice HTML5 compatible backend and fallback on the Touch one on mobile devices!
+🔹	Drag and Drop - Drag-and-drop application added using an open source library that enables simple integration of drag-and-drop functionality to the app.
 
 
 ## 🐾 Take your first step

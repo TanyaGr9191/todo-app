@@ -1,11 +1,8 @@
 import { Loading } from "./loading"
 import { TodoPreview } from "./todo-preview"
-import { useCallback, useEffect, useState } from "react"
-import update from 'immutability-helper'
+import { useCallback } from "react"
 
 export const TodoList = ({ todos, onRemoveTodo, onEditTodo, onSetTodos }) => {
-    const [todosLocal, setTodosLocal] = useState([])
-
 
     function moveItem(todosToChange,from, to) {
         const itemToMove = todosToChange.splice(from, 1)[0];
